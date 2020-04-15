@@ -8,4 +8,8 @@ Thermostat.prototype.increase = function(degrees) {
 
 Thermostat.prototype.decrease = function(degrees) {
   this.temp -= degrees
+  if (this.temp < 10) {
+    this.temp = 10
+  }
 }
+
