@@ -15,6 +15,10 @@ describe('Thermostat', function() {
       expect(thermostat.temp).toEqual(22)
     })
 
-    
+    it('temp can be decreased', function() {
+      thermostat.decrease(2)
+      expect(thermostat.temp).toEqual(18)
+    })
+
 }); 
 
