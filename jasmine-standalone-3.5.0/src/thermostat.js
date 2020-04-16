@@ -2,30 +2,33 @@ function Thermostat() {
   this.DEFUALT_TEMP = 20;
   this.HIGH_USAGE = 25;
   this.MEDIUM_USAGE = 18
+  this.MAX_TEMP = 32
+  this.MIN_TEMP = 10
+  this.SAVING_MAX_TEMP = 25
   this.temp = this.DEFUALT_TEMP;
   this.savingOn = true;
 }
 
 Thermostat.prototype.increase = function(degrees) {
   this.temp += degrees
-  if (this.temp > 25 && this.savingOn == true) {
-    this.temp = 25;
-  } else if (this.temp > 32) {
-    this.temp = 32
+  if (this.temp > this.SAVING_MAX_TEMP && this.savingOn == true) {
+    this.temp = this.SAVING_MAX_TEMP;
+  } else if (this.temp > this.MAX_TEMP) {
+    this.temp = this.MAX_TEMP
   }
 }
 
 Thermostat.prototype.decrease = function(degrees) {
   this.temp -= degrees
-  if (this.temp < 10) {
-    this.temp = 10;
+  if (this.temp < this.MIN_TEMP) {
+    this.temp = this.MIN_TEMP;
   }
 }
 
 Thermostat.prototype.powerSavingOn = function() {
   this.savingOn = true;
-  if (this.temp > 25) {
-    this.temp = 25
+  if (this.temp > this.SAVING_MAX_TEMP) {
+    this.temp = this.SAVING_MAX_TEMP
   }
 }
 
