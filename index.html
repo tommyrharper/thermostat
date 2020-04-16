@@ -3,23 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="jquery.js"></script>
   <script src="jasmine-standalone-3.5.0/src/thermostat.js"></script>
   <link rel="stylesheet" href="main.css">
   <script src="interface.js"></script>
+
   <title>Thermosat!</title>
 </head>
 <body>
   <h1 class="temperature">Temp: <span id="temp"></span></h1>
+
       <button id="temp-increase">+</button>
       <button id="temp-decrease">-</button>
       <button id="reset">Reset</button>
+
       <h2 >Powersaving is <span id="powersaving-mode"></span></h2>
+
       <button id="powersaving-on">Powersaving On</button>
       <button id="powersaving-off">Powersaving Off</button> 
+
       <h2>Energy usage is <span id="energy-usage"></span></h2>
-      <button id="update-weather">Update weather</button>
-      <h2>Temperature in London: <span id="london-temp"></span></h2>
-      <h2>Weather in London: <span id="london-weather"></span></h2>
+
+      <form id="weather-form">
+        <input placeholder="Enter City" id="location" type="text">
+        <input id="update-weather" type="submit">
+      </form>
+
+      <h2>Temperature: <span id="london-temp"></span></h2>
+      <h2>Weather: <span id="london-weather"></span></h2>
 </body>
 </html>

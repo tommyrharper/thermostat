@@ -2,12 +2,14 @@ $(function() {
 
   var thermostat = new Thermostat()
 
-  $("#update-weather").click(function() {
-    updateWeather()
+  $("#update-weather").click(function(e) {
+    e.preventDefault()
+    var city = $('#location').val();
+    updateWeather(city)
   })
 
-  var updateWeather = function() {
-    $.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
+  var updateWeather = function(city) {
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
       $('#london-weather').text(data.weather[0].description)
       $('#london-temp').text(data.main.temp)
     })
