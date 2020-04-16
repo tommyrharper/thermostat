@@ -1,5 +1,7 @@
 # Thermostat
 
+Check it out! - http://toms-amazing-thermostat.surge.sh/
+
 ## User Stories
 
 ```
