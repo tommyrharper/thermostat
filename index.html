@@ -17,11 +17,12 @@
       <h2 >Powersaving is <span id="powersaving-mode">On</span></h2>
       <button id="powersaving-on">Powersaving On</button>
       <button id="powersaving-off">Powersaving Off</button> 
-      <h2 id="energy-usage">Energy usage is low</h2>
+      <h2>Energy usage is <span id="energy-usage">medium-usage</span></h2>
     </p>
     <script>
       var updateTemp = function() {
         $("#temp").html(thermostat.temp)
+        $("#energy-usage").html(thermostat.energyUsage())
       }
       var setPowerSavingMode = function(onOrOff) {
         $("#powersaving-mode").html(onOrOff)
