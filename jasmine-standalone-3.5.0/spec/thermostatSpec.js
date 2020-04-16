@@ -46,5 +46,11 @@ describe('Thermostat', function() {
     it('power saving mode is on by default', function() {
       expect(thermostat.savingOn).toEqual(true)
     })
+
+    it('reset can be used to reset temp to 20', function() {
+      thermostat.increase(10)
+      thermostat.reset()
+      expect(thermostat.temp).toEqual(20)
+    })
 }); 
 
