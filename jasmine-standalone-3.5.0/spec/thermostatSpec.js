@@ -60,6 +60,10 @@ describe('Thermostat', function() {
         expect(thermostat.energyUsage()).toEqual("low-usage")
       })
 
+      it('returns medium-usage when temp is less than 25 but not less than 18', function(){
+        expect(thermostat.energyUsage()).toEqual("medium-usage")
+      })
+
     })
 }); 
 
