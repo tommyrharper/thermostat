@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="jasmine-standalone-3.5.0/src/thermostat.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>  -->
+  <script src="jquery.js"></script>
+  <script src="jasmine-standalone-3.5.0/src/thermostat.js"></script>
   <title>Thermosat!</title>
 </head>
 <body>
@@ -17,5 +19,6 @@
       <button id="powersaving-off">Powersaving Off</button> 
       <h2 id="energy-usage">Energy usage is low</h2>
     </p>
+    <script>$("h1").click(function() { console.log("yo") } )</script>
 </body>
 </html>
