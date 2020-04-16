@@ -24,7 +24,7 @@ body {
   align-items: center;
   justify-content: center;
   background-image: url(./images/background-image3.jpg);
-  background-color: rgb(56, 56, 56);
+  background-color: #A1000C;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -32,7 +32,7 @@ body {
 }
 
 button, input {
-  font-size: 20px;
+  font-size: 19px;
   color: white;
   font-family: "Fredoka One";
   padding: 10px 20px;
@@ -44,14 +44,15 @@ button, input {
 }
 
 #temp {
-  font-size: 100px;
+  font-size: 90px;
   text-shadow: 0 0 3px white;
 }
 
 #title {
-  font-size: 60px;
+  font-size: 50px;
+  text-shadow: 0 0 3px #A1000C;
 }
 
-/* #buttons-box {
-  background-color: #F6BB4B;
-} */
+#update-weather {
+  display: none;
+}

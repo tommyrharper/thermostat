@@ -40,24 +40,17 @@ $(function() {
     updateTemp()
   })
 
-  $("#powersaving-on").click(function() { 
-    thermostat.powerSavingOn();
-    updateTemp()
-    setPowerSavingMode("On")
-    console.log(thermostat.savingOn)
-  })
-
-$("#powersaving-off").click(function() { 
+$("#powersaving-switch").click(function() { 
 if (thermostat.savingOn == true) {
   thermostat.powerSavingOff();
   updateTemp()
   console.log(thermostat.savingOn)
-  $("#powersaving-off").text("Powersaving On")
+  $("#powersaving-switch").text("Powersaving Off")
 } else {
   thermostat.powerSavingOn();
   updateTemp()
   console.log(thermostat.savingOn)
-  $("#powersaving-off").text("Powersaving Off")
+  $("#powersaving-switch").text("Powersaving On")
 }
 })
 
