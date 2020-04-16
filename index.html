@@ -19,6 +19,9 @@
       <button id="powersaving-off">Powersaving Off</button> 
       <h2 id="energy-usage">Energy usage is low</h2>
     </p>
-    <script>$("h1").click(function() { console.log("yo") } )</script>
+    <script>
+      var thermostat = new Thermostat()
+      $("#temp-increase").click(function() { thermostat.increase(1); } )
+    </script>
 </body>
 </html>
