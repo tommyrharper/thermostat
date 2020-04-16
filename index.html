@@ -25,6 +25,10 @@
         thermostat.increase(1);
         $("#temp").html(thermostat.temp)
       })
+      $("#temp-decrease").click(function() { 
+        thermostat.decrease(1);
+        $("#temp").html(thermostat.temp)
+      })
     </script>
 </body>
 </html>
