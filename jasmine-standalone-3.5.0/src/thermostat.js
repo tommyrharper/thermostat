@@ -33,3 +33,7 @@ Thermostat.prototype.powerSavingOff = function() {
 Thermostat.prototype.reset = function() {
   this.temp = 20;
 }
+
+Thermostat.prototype.energyUsage = function() {
+  return "low-usage"
+}
