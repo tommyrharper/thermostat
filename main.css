@@ -1,0 +1,9 @@
+.low-usage {
+  color: blue;
+}
+.medium-usage {
+  color: purple;
+}
+.high-usage {
+  color: red;
+}

@@ -5,17 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="jquery.js"></script>
   <script src="jasmine-standalone-3.5.0/src/thermostat.js"></script>
-  <style>
-    .low-usage {
-      color: blue;
-    }
-    .medium-usage {
-      color: purple;
-    }
-    .high-usage {
-      color: red;
-    }
-  </style>
+  <link rel="stylesheet" href="main.css">
+  <script src="interface.js"></script>
   <title>Thermosat!</title>
 </head>
 <body>
@@ -29,40 +20,5 @@
       <button id="powersaving-off">Powersaving Off</button> 
       <h2>Energy usage is <span id="energy-usage"></span></h2>
     </p>
-    <script>
-      var updateTemp = function() {
-        $("#temp").html(thermostat.temp)
-        $("#energy-usage").html(thermostat.energyUsage())
-        $("#temp").attr("class", thermostat.energyUsage())
-      }
-      var setPowerSavingMode = function(onOrOff) {
-        $("#powersaving-mode").html(onOrOff)
-      }
-      var thermostat = new Thermostat()
-      $("#temp-increase").click(function() { 
-        thermostat.increase(1);
-        updateTemp()
-      })
-      $("#temp-decrease").click(function() { 
-        thermostat.decrease(1);
-        updateTemp()
-      })
-      $("#reset").click(function() { 
-        thermostat.reset();
-        updateTemp()
-      })
-      $("#powersaving-on").click(function() { 
-        thermostat.powerSavingOn();
-        updateTemp()
-        setPowerSavingMode("On")
-      })
-      $("#powersaving-off").click(function() { 
-        thermostat.powerSavingOff();
-        updateTemp()
-        setPowerSavingMode("Off")
-      })
-      updateTemp()
-      setPowerSavingMode("On")
-    </script>
 </body>
 </html>
