@@ -1,5 +1,8 @@
 function Thermostat() {
-  this.temp = 20;
+  this.DEFUALT_TEMP = 20;
+  this.HIGH_USAGE = 25;
+  this.MEDIUM_USAGE = 18
+  this.temp = this.DEFUALT_TEMP;
   this.savingOn = true;
 }
 
@@ -31,14 +34,14 @@ Thermostat.prototype.powerSavingOff = function() {
 }
 
 Thermostat.prototype.reset = function() {
-  this.temp = 20;
+  this.temp = this.DEFUALT_TEMP;
 }
 
 Thermostat.prototype.energyUsage = function() {
-  if (this.temp > 24) {
+  if (this.temp >= this.HIGH_USAGE) {
     return 'high-usage'
   } 
-  if (this.temp > 17) {
+  if (this.temp >= this.MEDIUM_USAGE) {
     return "medium-usage"
   }
     return "low-usage"
