@@ -1,3 +1,9 @@
+/* reset */
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
 .low-usage {
   color: blue;
 }
@@ -7,3 +13,45 @@
 .high-usage {
   color: red;
 }
+
+body {
+  font-family: "Fredoka One";
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./images/background-image.jpeg);
+  background-color: rgb(56, 56, 56);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  margin: 0;
+}
+
+button, input {
+  font-size: 20px;
+  color: white;
+  font-family: "Fredoka One";
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.315);
+  border-radius: 5px;
+  border-width: 5px;
+  border-color: white;
+  margin: 10px;
+}
+
+#temp {
+  font-size: 100px;
+  text-shadow: 0 0 3px white;
+}
+
+#title {
+  font-size: 60px;
+}
+
+/* #buttons-box {
+  background-color: #F6BB4B;
+} */
