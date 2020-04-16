@@ -38,8 +38,13 @@ describe('Thermostat', function() {
     })
 
     it('temp has maximum value of 32 when power saving is off', function(){
+      thermostat.powerSavingOff()
       thermostat.increase(100)
       expect(thermostat.temp).toEqual(32)
+    })
+
+    it('power saving mode is on by default', function() {
+      expect(thermostat.savingOn).toEqual(true)
     })
 }); 
 

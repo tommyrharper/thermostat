@@ -1,6 +1,6 @@
 function Thermostat() {
   this.temp = 20;
-  this.savingOn = false;
+  this.savingOn = true;
 }
 
 Thermostat.prototype.increase = function(degrees) {
@@ -24,4 +24,8 @@ Thermostat.prototype.powerSavingOn = function() {
   if (this.temp > 25) {
     this.temp = 25
   }
+}
+
+Thermostat.prototype.powerSavingOff = function() {
+  this.savingOn = false;
 }
