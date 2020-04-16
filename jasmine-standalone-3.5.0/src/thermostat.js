@@ -7,6 +7,8 @@ Thermostat.prototype.increase = function(degrees) {
   this.temp += degrees
   if (this.temp > 25 && this.savingOn == true) {
     this.temp = 25;
+  } else if (this.temp > 32) {
+    this.temp = 32
   }
 }
 

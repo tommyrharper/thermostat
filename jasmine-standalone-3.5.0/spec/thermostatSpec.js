@@ -31,10 +31,15 @@ describe('Thermostat', function() {
       expect(thermostat.temp).toEqual(25)
     })
 
-    it('temp can be decreased', function() {
+    it('when power saving is turned on, if the temp is above 25 it gets set to 25', function() {
       thermostat.increase(6)
       thermostat.powerSavingOn()
       expect(thermostat.temp).toEqual(25)
+    })
+
+    it('temp has maximum value of 32 when power saving is off', function(){
+      thermostat.increase(100)
+      expect(thermostat.temp).toEqual(32)
     })
 }); 
 
