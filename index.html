@@ -14,7 +14,7 @@
       <button id="temp-increase">+</button>
       <button id="temp-decrease">-</button>
       <button id="reset">Reset</button>
-      <h2 id="powersaving-mode">Powersaving is On</h2>
+      <h2 >Powersaving is <span id="powersaving-mode">On</span></h2>
       <button id="powersaving-on">Powersaving On</button>
       <button id="powersaving-off">Powersaving Off</button> 
       <h2 id="energy-usage">Energy usage is low</h2>
@@ -33,7 +33,16 @@
         thermostat.reset();
         $("#temp").html(thermostat.temp)
       })
-      
+      $("#powersaving-on").click(function() { 
+        thermostat.powerSavingOn();
+        $("#temp").html(thermostat.temp)
+        $("#powersaving-mode").html("On")
+      })
+      $("#powersaving-off").click(function() { 
+        thermostat.powerSavingOff();
+        $("#temp").html(thermostat.temp)
+        $("#powersaving-mode").html("Off")
+      })
     </script>
 </body>
 </html>
