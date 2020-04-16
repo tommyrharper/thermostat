@@ -31,6 +31,10 @@ describe('Thermostat', function() {
       expect(thermostat.temp).toEqual(25)
     })
 
-
+    it('temp can be decreased', function() {
+      thermostat.increase(6)
+      thermostat.powerSavingOn()
+      expect(thermostat.temp).toEqual(25)
+    })
 }); 
 
