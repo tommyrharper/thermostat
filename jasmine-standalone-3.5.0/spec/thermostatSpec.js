@@ -64,6 +64,11 @@ describe('Thermostat', function() {
         expect(thermostat.energyUsage()).toEqual("medium-usage")
       })
 
+      it('returns high-usage when temp is less 25 or greater', function(){
+        thermostat.increase(100)
+        expect(thermostat.energyUsage()).toEqual("high-usage")
+      })
+
     })
 }); 
 
