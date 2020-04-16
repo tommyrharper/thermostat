@@ -1,17 +1,17 @@
 /* reset */
-/* * {
+* {
   margin: 0;
   padding: 0;
-} */
+}
 
 .low-usage {
   color: blue;
 }
 .medium-usage {
-  color: purple;
+  color: red;
 }
 .high-usage {
-  color: red;
+  color: yellow;
 }
 
 body {
@@ -23,7 +23,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(./images/background-image.jpeg);
+  background-image: url(./images/background-image3.jpg);
   background-color: rgb(56, 56, 56);
   background-repeat: no-repeat;
   background-size: cover;
