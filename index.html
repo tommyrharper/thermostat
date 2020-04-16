@@ -9,7 +9,7 @@
   <title>Thermosat!</title>
 </head>
 <body>
-  <h1 id="temp">Temp: 15</h1>
+  <h1>Temp: <span id="temp">20</span></h1>
     <p>
       <button id="temp-increase">+</button>
       <button id="temp-decrease">-</button>
@@ -21,7 +21,10 @@
     </p>
     <script>
       var thermostat = new Thermostat()
-      $("#temp-increase").click(function() { thermostat.increase(1); } )
+      $("#temp-increase").click(function() { 
+        thermostat.increase(1);
+        $("#temp").html(thermostat.temp)
+      })
     </script>
 </body>
 </html>
