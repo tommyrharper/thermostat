@@ -20,28 +20,34 @@
       <h2 id="energy-usage">Energy usage is low</h2>
     </p>
     <script>
+      var updateTemp = function() {
+        $("#temp").html(thermostat.temp)
+      }
+      var setPowerSavingMode = function(onOrOff) {
+        $("#powersaving-mode").html(onOrOff)
+      }
       var thermostat = new Thermostat()
       $("#temp-increase").click(function() { 
         thermostat.increase(1);
-        $("#temp").html(thermostat.temp)
+        updateTemp()
       })
       $("#temp-decrease").click(function() { 
         thermostat.decrease(1);
-        $("#temp").html(thermostat.temp)
+        updateTemp()
       })
       $("#reset").click(function() { 
         thermostat.reset();
-        $("#temp").html(thermostat.temp)
+        updateTemp()
       })
       $("#powersaving-on").click(function() { 
         thermostat.powerSavingOn();
-        $("#temp").html(thermostat.temp)
-        $("#powersaving-mode").html("On")
+        updateTemp()
+        setPowerSavingMode("On")
       })
       $("#powersaving-off").click(function() { 
         thermostat.powerSavingOff();
-        $("#temp").html(thermostat.temp)
-        $("#powersaving-mode").html("Off")
+        updateTemp()
+        setPowerSavingMode("Off")
       })
     </script>
 </body>
