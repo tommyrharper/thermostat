@@ -19,6 +19,7 @@ $(function() {
     $("#temp").html(thermostat.temp)
     $("#energy-usage").html(thermostat.energyUsage())
     $("#temp").attr("class", thermostat.energyUsage())
+    $("#temp2").attr("class", thermostat.energyUsage())
   }
 
   var setPowerSavingMode = function(onOrOff) {
