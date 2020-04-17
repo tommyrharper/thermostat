@@ -45,12 +45,10 @@ $("#powersaving-switch").click(function() {
 if (thermostat.savingOn == true) {
   thermostat.powerSavingOff();
   updateTemp()
-  console.log(thermostat.savingOn)
   $("#powersaving-switch").text("Powersaving Off")
 } else {
   thermostat.powerSavingOn();
   updateTemp()
-  console.log(thermostat.savingOn)
   $("#powersaving-switch").text("Powersaving On")
 }
 })
